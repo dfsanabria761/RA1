@@ -54,13 +54,16 @@ public class RA1 {
 		 * uno u otro es requerido. 
 		 * */
 		Configuration conf = new Configuration();	
-		Job wcJob=Job.getInstance(conf, "RA1 Job");
 		conf.set(METODO_PAGO, medPag);
 		conf.set(VALOR_PAGO, valPag);
 		conf.set(HORA, hora);
 		conf.set(DIA, dia);
+
 		conf.set(CANT_PAS, cantPas);
+
 		conf.set(LONGITUD, longitud);
+		Job wcJob=Job.getInstance(conf, "RA1 Job");
+
 		wcJob.setJarByClass(RA1.class);
 		//////////////////////
 		//Mapper

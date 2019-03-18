@@ -21,7 +21,6 @@ public class RA1Reducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 		for(IntWritable iw:values){
 			tot+=iw.get();
 		}
-		System.out.println("Reducer_Key: "+key.toString()+ " REDUCER_VALUE: "+tot);
 
 		context.write(key, new IntWritable(tot));
 		
